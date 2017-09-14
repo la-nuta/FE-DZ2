@@ -1,0 +1,109 @@
+
+body, nav, div, ul, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: lavenderblush;
+}
+
+nav {
+    display: block;
+    width: 10%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rebeccapurple;
+    position: fixed;
+    font-size: 0;
+}
+
+ul {
+    list-style-type: none;
+    position: relative;
+}
+
+#content {
+    margin: 0;
+    display: inline-block;
+    width: 90%;
+    height: 100%;
+    left: 10%;
+    position: relative;
+    top: 0;
+    padding-right: -15px;
+}
+
+#content div, #content div:target ~ div {
+    font-size: 16px;
+    padding-left: 15px;
+    display: none;
+}
+
+#main {
+    font-size: 16px;
+    padding-left: 15px;
+    display: block;
+}
+
+li {
+    left: 0;
+    width: 100%;
+    color: red;
+}
+
+li:hover {
+    background-color: #ded5ef;
+}
+
+a:hover {
+    color: rebeccapurple;
+}
+
+a:active {
+    color: red;
+}
+
+#content div:target, #content div:last-child {
+    display: block;
+}
+
+a {
+    color: #ded5ef;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 40px;
+    display: inline-block;
+    padding-left: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+a[rel="main"]::before {
+    content: "\2302";
+    color: red;
+}
+
+a[rel="about"]::before {
+    content: "\2047";
+    color: red;
+}
+
+a[rel="envelope"]::before {
+    content: "\2709";
+    color: red;
+}
+
+a[rel="facebook"]::before {
+    content: "f";
+    color: red;
+}
+
+a[target=_blank]::after {
+    content: "\21d7";
+    color: red;
+}
+
+
